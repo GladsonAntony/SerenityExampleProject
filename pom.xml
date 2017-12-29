@@ -179,7 +179,7 @@
 				<artifactId>maven-eclipse-plugin</artifactId>
 				<version>${maven-eclipse-plugin.version}</version>
 				<configuration>
-					<buildOutputDirectory>build/classes</buildOutputDirectory>
+					<buildOutputDirectory>/target/build/classes</buildOutputDirectory>
 					<downloadJavadocs>true</downloadJavadocs>
 					<downloadSources>true</downloadSources>
 				</configuration>
