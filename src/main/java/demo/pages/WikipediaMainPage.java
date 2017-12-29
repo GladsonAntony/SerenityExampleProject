@@ -1,6 +1,6 @@
 package demo.pages;
 
-import ch.lambdaj.function.convert.Converter;
+// import ch.lambdaj.function.convert.Converter;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 
 import java.util.List;
 
-import static ch.lambdaj.Lambda.convert;
+// import static ch.lambdaj.Lambda.convert;
 
 @DefaultUrl("http://en.wiktionary.org/wiki/Wiktionary:Main_Page")
 public class WikipediaMainPage extends PageObject {
@@ -29,17 +29,17 @@ public class WikipediaMainPage extends PageObject {
         lookupButton.click();
     }
 
-    public List<String> getDefinitions() {
-        WebElementFacade definitionList = find(By.tagName("ol"));
-        List<WebElement> results = definitionList.findElements(By.tagName("li"));
-        return convert(results, toStrings());
-    }
+    // public List<String> getDefinitions() {
+    //     WebElementFacade definitionList = find(By.tagName("ol"));
+    //     List<WebElement> results = definitionList.findElements(By.tagName("li"));
+    //     return convert(results, toStrings());
+    // }
 
-    private Converter<WebElement, String> toStrings() {
-        return new Converter<WebElement, String>() {
-            public String convert(WebElement from) {
-                return from.getText();
-            }
-        };
-    }
+    // private Converter<WebElement, String> toStrings() {
+    //     return new Converter<WebElement, String>() {
+    //         public String convert(WebElement from) {
+    //             return from.getText();
+    //         }
+    //     };
+    // }
 }
