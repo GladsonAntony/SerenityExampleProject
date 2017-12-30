@@ -1,4 +1,4 @@
-package demo.pages;
+package pageObjects.pages;
 
 
 import net.serenitybdd.core.pages.PageObject;

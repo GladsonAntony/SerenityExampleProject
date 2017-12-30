@@ -1,4 +1,4 @@
-package demo.pages;
+package pageObjects.pages;
 
 import io.appium.java_client.pagefactory.iOSFindBy;
 import net.serenitybdd.core.annotations.findby.By;

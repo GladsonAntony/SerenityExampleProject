@@ -37,12 +37,12 @@
 
 
 		<!-- JUnit Dependency -->
-		<dependency>
+<!-- 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
 			<scope>test</scope>
-		</dependency>
+		</dependency> -->
 
 
 		<!-- JUnit Dataprovider Dependency -->
@@ -50,7 +50,6 @@
 			<groupId>com.tngtech.java</groupId>
 			<artifactId>junit-dataprovider</artifactId>
 			<version>${junit.dataprovider.version}</version>
-			<scope>test</scope>
 		</dependency>
 
 
@@ -257,6 +256,29 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.0.2</version>
+			</plugin>
+
+			<!-- This Plugin creates a jar archive of the source files of the current 
+				project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+			</plugin>
+
+			<!-- The Javadoc Plugin uses the Javadoc tool to generate javadocs for 
+				the specified project -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.0.0-M1</version>
 			</plugin>
 		</plugins>
 	</build>
