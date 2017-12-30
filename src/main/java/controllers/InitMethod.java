@@ -1,6 +1,9 @@
 /**
- * 
+ * @Author Gladson Antony
+ * @Date 30-Dec-2017 
+ * @Time 11:34:15 AM
  */
+
 package controllers;
 
 import java.awt.Robot;
@@ -12,11 +15,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-/**
- * @Author Gladson Antony
- * @Date 28-Jan-2017
- */
-public class InitMethod 
+public class InitMethod
 {
 	public static String FS = File.separator;
 
@@ -42,6 +41,5 @@ public class InitMethod
 	public static String FileToUpload;
 	public static Actions ac;
 	public static WebDriver augmentedDriver;
-	public static URI uri;
-		
+	public static URI uri;		
 }

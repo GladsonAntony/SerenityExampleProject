@@ -1,3 +1,9 @@
+/**
+ * @Author Gladson Antony
+ * @Date 30-Dec-2017 
+ * @Time 11:39:34 PM
+ */
+
 package utils;
 
 import java.util.List;
@@ -10,11 +16,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 
 import controllers.MainMethod;
-
-/**
- * @Author Gladson Antony
- * @Date 25-Dec-2016
- */
 
 public class FluentWaiting extends MainMethod
 {

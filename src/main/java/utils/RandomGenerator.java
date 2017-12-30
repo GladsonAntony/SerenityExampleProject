@@ -1,13 +1,14 @@
+/**
+ * @Author Gladson Antony
+ * @Date 30-Dec-2017 
+ * @Time 11:39:52 PM
+ */
+
 package utils;
 
 import java.util.Random;
 
 import org.apache.commons.lang3.RandomStringUtils;
-
-/**
- * @Author Gladson Antony
- * @Date 25-Dec-2016
- */
 
 public class RandomGenerator 
 {

@@ -1,6 +1,9 @@
 /**
- * 
+ * @Author Gladson Antony
+ * @Date 30-Dec-2017 
+ * @Time 11:38:12 PM
  */
+
 package controllers;
 
 import java.awt.Rectangle;
@@ -19,10 +22,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
-/**
- * @Author Gladson Antony
- * @Date 27-Jan-2017
- */
 public class TestHelper extends MainMethod
 {
 

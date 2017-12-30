@@ -1,4 +1,6 @@
-package pageObjects.steps;
+package steps;
+
+import static org.hamcrest.MatcherAssert.assertThat;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.StepGroup;
@@ -8,18 +10,18 @@ import pageObjects.pages.GoogleLoginPage;
 import pageObjects.pages.GoogleResultsPage;
 import pageObjects.pages.GoogleSearchPage;
 
-import static org.hamcrest.MatcherAssert.assertThat;
+public class GoogleSteps extends ScenarioSteps 
+{
 
-public class GoogleSteps extends ScenarioSteps {
-
-	private static final long serialVersionUID = 5416584546042922230L;
+	private static final long serialVersionUID = 1L;
 
 	public GoogleSteps(Pages pages) 
 	{
 		super(pages);
 	}
 
-	public GoogleSearchPage googleSearchPage() {
+	public GoogleSearchPage googleSearchPage() 
+	{
 		return getPages().currentPageAt(GoogleSearchPage.class);
 	}
 
