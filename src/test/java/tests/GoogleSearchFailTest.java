@@ -1,11 +1,13 @@
 package tests;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import pageObjects.initializePageObjects.PageFactoryInitializer;
 
 public class GoogleSearchFailTest extends PageFactoryInitializer
 {
+	@Ignore
     @Test
     public void googleSearchFailTest() 
     {
