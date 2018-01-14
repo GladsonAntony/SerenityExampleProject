@@ -5,10 +5,14 @@
  */
 package controllers;
 
+import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
+
+import com.tngtech.java.junit.dataprovider.DataProviderRunner;
 
 import net.thucydides.core.annotations.Managed;
 
+@RunWith(DataProviderRunner.class)
 public class MainMethod extends InitMethod
 {
 	@Managed

@@ -8,7 +8,7 @@ package steps;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
-import pageObjects.pages.GoogleHomePageObjects;;
+import pageObjects.pages.GoogleHomePage;;
 
 public class GoogleHomePageSteps extends ScenarioSteps
 {
@@ -19,23 +19,51 @@ public class GoogleHomePageSteps extends ScenarioSteps
 		super(pages);
 	}
 	
-	public GoogleHomePageObjects googleHomePageObjects() 
+	public GoogleHomePage googleHomePage() 
 	{
-		return getPages().currentPageAt(GoogleHomePageObjects.class);
+		return getPages().currentPageAt(GoogleHomePage.class);
 	}
 	
-	@Step
+	@Step ("Verify Page Title")
 	public GoogleHomePageSteps verifyPageTitle()
 	{
-		googleHomePageObjects().verifyPageTitle();
+		googleHomePage().verifyPageTitle();
 		return this;
 	}
 	
-	@Step
+	@Step("Verify Page Elements")
+	public void verifyPageElements1()
+	{
+		googleHomePage().verifyPageElements();
+		//return null;
+	}
+	
+	@Step("Verify Page Elements")
 	public GoogleHomePageSteps verifyPageElements()
 	{
-		googleHomePageObjects().verifyPageElements();
+		googleHomePage().verifyPageElements();
+		return this;
+	}
+
+	@Step("Enter Search Text: {0}")
+	public GoogleHomePageSteps searchFor(String string) 
+	{
+		googleHomePage().enterSearchText(string);
+		return this;
+	}
+
+	@Step("verify the Search Results")
+	public GoogleHomePageSteps verifySearchResults() 
+	{
+		googleHomePage().verifyPageTitle();
 		return this;
 	}
 	
+	@Step("Click On Sign In Button")
+	public GoogleHomePageSteps clickOnSignIn() 
+	{
+		googleHomePage().clickOnSignInButton();
+		return this;
+	}
+
 }

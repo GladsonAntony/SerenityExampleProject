@@ -1,11 +1,12 @@
 package pageObjects.pages;
 
-import net.serenitybdd.core.pages.PageObject;
-import net.thucydides.core.annotations.Step;
+import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import net.serenitybdd.core.pages.PageObject;
 
 public class GoogleLoginPage extends PageObject 
 {
@@ -15,31 +16,45 @@ public class GoogleLoginPage extends PageObject
         super(driver);
     }
 
-    @FindBy(id = "Email")
-    private WebElement userInput;
+    @FindBy(xpath="//input[@type='email']")
+    private WebElement field_EMailID;
 
-    @FindBy(id = "Passwd")
-    private WebElement passwordInput;
+    @FindBy(xpath="//button[text()='Forgot email?']")
+    private WebElement button_ForgotEMail;
 
-    @FindBy(id = "signIn")
-    private WebElement loginButton;
+    @FindBy(xpath="//div[text()='More options']")
+    private WebElement button_MoreOptions;
 
-    @Step
-    public void inputUserName(String emailAddress) 
-    {
-        element(userInput).waitUntilVisible();
-        userInput.sendKeys(emailAddress);
-    }
+    @FindBy(xpath="//span[text()='Next']")
+    private WebElement button_Next;
+        
+    @FindBy(xpath="//input[@type='password']")
+    private WebElement field_Password;
 
-    public void inputPassword(String password) 
-    {
-        element(passwordInput).waitUntilVisible();
-        passwordInput.sendKeys(password);
-    }
+    @FindBy(xpath="//div[text()='Forgot password?']")
+    private WebElement button_ForgotPassword;
 
-    public void clickOnLogin() 
-    {
-        element(loginButton).waitUntilVisible();
-        loginButton.click();
-    }
+	public GoogleLoginPage verifyPageElements() 
+	{
+		assertTrue(field_EMailID.isDisplayed());
+		assertTrue(button_ForgotEMail.isDisplayed());
+		assertTrue(button_Next.isDisplayed());
+		return this;
+	}
+
+	public GoogleLoginPage enterEMailAddress(String email) 
+	{
+		field_EMailID.sendKeys(email);
+		button_Next.click();
+		return this;
+	}
+
+	public GoogleLoginPage enterPassword(String password) 
+	{
+		waitFor(field_Password);
+		assertTrue(field_Password.isDisplayed());
+		field_Password.sendKeys(password);
+		button_Next.click();
+		return this;
+	}
 }

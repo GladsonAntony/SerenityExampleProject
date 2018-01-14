@@ -12,14 +12,18 @@ import controllers.MainMethod;
 import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
 import steps.GoogleHomePageSteps;
-import steps.GoogleSteps;
+import steps.GoogleLoginPageSteps;
+import steps.GoogleSearchResultsPageSteps;
 
 @RunWith(SerenityRunner.class)
 public class PageFactoryInitializer extends MainMethod
-{
-	@Steps
-	public GoogleSteps googleSteps;
-	
+{	
 	@Steps
 	public GoogleHomePageSteps googleHomePageSteps;
+	
+	@Steps
+	public GoogleSearchResultsPageSteps googleSearchResultsSteps;
+	
+	@Steps
+	public GoogleLoginPageSteps googleLoginPageSteps;
 }

@@ -14,11 +14,11 @@ import org.openqa.selenium.WebElement;
 
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.PageObject;
-import utils.FluentWaiting;
 
-public class GoogleHomePageObjects extends PageObject
+public class GoogleHomePage extends PageObject
 {			
-    public GoogleHomePageObjects(WebDriver driver) 
+
+	public GoogleHomePage(WebDriver driver) 
     {
         super(driver);
     }
@@ -41,19 +41,32 @@ public class GoogleHomePageObjects extends PageObject
 	@FindBy(xpath="//a[contains(text(),'Sign in')]")
 	private WebElement button_SignIn;
 	
-	public GoogleHomePageObjects verifyPageTitle()
+	
+	public GoogleHomePage verifyPageTitle()
 	{
-		FluentWaiting.waitForTitleToBe(20, 500, "Google");
 		assertThat(getDriver().getTitle(), containsString("Google"));
 		return this;
 	}
 	
-	public GoogleHomePageObjects verifyPageElements()
+	public GoogleHomePage verifyPageElements()
 	{
 		assertTrue(button_SignIn.isDisplayed());
 		assertTrue(searchBox.isDisplayed());
 		assertTrue(link_Images.isDisplayed());
-		assertTrue(link_GMail.isDisplayed());
+		//assertTrue(link_GMail.isDisplayed());
+		return this;
+	}
+
+	public GoogleHomePage enterSearchText(String string) 
+	{
+		searchBox.sendKeys(string);
+		button_SearchButton.click();
+		return this;
+	}
+	
+	public GoogleHomePage clickOnSignInButton()
+	{
+		button_SignIn.click();
 		return this;
 	}
 

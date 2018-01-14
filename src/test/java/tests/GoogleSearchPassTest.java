@@ -1,19 +1,26 @@
+/**
+ * @Author Gladson Antony
+ * @Date 14-Jan-2018 
+ * @Time 8:02:00 PM
+ */
+
 package tests;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import pageObjects.initializePageObjects.PageFactoryInitializer;
 
 public class GoogleSearchPassTest extends PageFactoryInitializer
 {
-	@Ignore
     @Test
     public void googleSearchPassTest() 
     {   	
-    	googleSteps
-    	.performSearch("42")
-    	.findSearchResult("Stupidedia")
-    	.verifyUrl("http://www.stupidedia.org/stupi/42");
+		googleHomePageSteps
+		.verifyPageTitle()
+		.verifyPageElements()
+		.searchFor("Naruto Uzumaki");
+		googleSearchResultsSteps
+		.verifyPageElements()
+		.verifyPageTitle("Naruto Uzumaki");
     }
 }
