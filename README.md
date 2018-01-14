@@ -1,7 +1,9 @@
 # Serenity Framework - TDD Example
 [![N|Solid](http://www.seleniumhq.org/images/selenium-logo.png)](http://www.seleniumhq.org/) 
-[![N|Solid](http://thucydides.info/img/serenity-bdd.png = 100*20)](http://thucydides.info) 
-[![N|Solid](http://junit.org/junit5/assets/img/junit5-logo.png)](http://junit.org/junit5/) 
+[![N|Solid](http://thucydides.info/img/serenity-bdd.png)](http://thucydides.info) 
+<!-- [![N|Solid](http://junit.org/junit5/assets/img/junit5-logo.png)](http://junit.org/junit5/)  -->
+
+<img src="http://junit.org/junit5/assets/img/junit5-logo.png" alt="http://junit.org/junit5/" style="width: 200px;"/>
 
 <div style="text-align: justify"> 
 Serenity is a tool that lets you use WebDriver-based unit or BDD tests to write more flexible and more reusable WebDriver-based tests, and also to generate documentation about your acceptance tests, including a narrative description of test, along with the corresponding screen shots, and also high-level summaries and aggregations of the test results
