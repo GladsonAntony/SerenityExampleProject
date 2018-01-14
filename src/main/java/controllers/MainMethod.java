@@ -8,11 +8,10 @@ package controllers;
 import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 
-import com.tngtech.java.junit.dataprovider.DataProviderRunner;
-
+import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Managed;
 
-@RunWith(DataProviderRunner.class)
+@RunWith(SerenityRunner.class)
 public class MainMethod extends InitMethod
 {
 	@Managed

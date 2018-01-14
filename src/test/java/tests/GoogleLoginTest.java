@@ -1,13 +1,10 @@
 package tests;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.junit.annotations.UseTestDataFrom;
 import pageObjects.initializePageObjects.PageFactoryInitializer;
 
-@RunWith(SerenityParameterizedRunner.class)
 @UseTestDataFrom(value="./src/test/resources/CSV Files/performLogin.csv")
 public class GoogleLoginTest extends PageFactoryInitializer
 {	

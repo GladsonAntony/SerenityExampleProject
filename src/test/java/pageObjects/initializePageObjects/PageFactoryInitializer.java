@@ -9,13 +9,13 @@ package pageObjects.initializePageObjects;
 import org.junit.runner.RunWith;
 
 import controllers.MainMethod;
-import net.serenitybdd.junit.runners.SerenityRunner;
+import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.core.annotations.Steps;
 import steps.GoogleHomePageSteps;
 import steps.GoogleLoginPageSteps;
 import steps.GoogleSearchResultsPageSteps;
 
-@RunWith(SerenityRunner.class)
+@RunWith(SerenityParameterizedRunner.class)
 public class PageFactoryInitializer extends MainMethod
 {	
 	@Steps
