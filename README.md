@@ -1,6 +1,6 @@
 # Serenity Framework - TDD Example
 [![N|Solid](http://www.seleniumhq.org/images/selenium-logo.png)](http://www.seleniumhq.org/) 
-[![N|Solid](http://thucydides.info/img/serenity-bdd.png)](http://thucydides.info) 
+[![N|Solid](http://thucydides.info/img/serenity-bdd.png =100x20)](http://thucydides.info) 
 <!-- [![N|Solid](http://junit.org/junit5/assets/img/junit5-logo.png)](http://junit.org/junit5/)  -->
 
 <img src="http://junit.org/junit5/assets/img/junit5-logo.png" alt="http://junit.org/junit5/" style="height: 20px; width: 200px;"/>
