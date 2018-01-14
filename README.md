@@ -5,6 +5,8 @@
 
 <img src="http://junit.org/junit5/assets/img/junit5-logo.png" alt="http://junit.org/junit5/" style="height: 20px; width: 200px;"/>
 
+<img src="http://thucydides.info/img/serenity-bdd.png" width="200" height="200" />
+
 <div style="text-align: justify"> 
 Serenity is a tool that lets you use WebDriver-based unit or BDD tests to write more flexible and more reusable WebDriver-based tests, and also to generate documentation about your acceptance tests, including a narrative description of test, along with the corresponding screen shots, and also high-level summaries and aggregations of the test results
 It provides support for running tests and advanced reporting by using BDD.
