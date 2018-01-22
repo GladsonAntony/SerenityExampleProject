@@ -3,12 +3,12 @@
  * @Date 01-Jan-2018 
  * @Time 9:38:13 AM
  */
-package steps;
+package steps.scenarioSteps;
 
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
-import pageObjects.pages.GoogleHomePage;;
+import pages.homePage.GoogleHomePage;;
 
 public class GoogleHomePageSteps extends ScenarioSteps
 {

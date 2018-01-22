@@ -4,19 +4,19 @@
  * @Time 11:28:38 PM
  */
 
-package pageObjects.initializePageObjects;
+package steps.initializeSteps;
 
 import org.junit.runner.RunWith;
 
 import controllers.MainMethod;
-import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
+import net.serenitybdd.junit.runners.SerenityRunner;
 import net.thucydides.core.annotations.Steps;
-import steps.GoogleHomePageSteps;
-import steps.GoogleLoginPageSteps;
-import steps.GoogleSearchResultsPageSteps;
+import steps.scenarioSteps.GoogleHomePageSteps;
+import steps.scenarioSteps.GoogleLoginPageSteps;
+import steps.scenarioSteps.GoogleSearchResultsPageSteps;
 
-@RunWith(SerenityParameterizedRunner.class)
-public class PageFactoryInitializer extends MainMethod
+@RunWith(SerenityRunner.class)
+public class ScenarioStepsInitializer extends MainMethod
 {	
 	@Steps
 	public GoogleHomePageSteps googleHomePageSteps;

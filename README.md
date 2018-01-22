@@ -15,8 +15,7 @@ It provides support for running tests and advanced reporting by using BDD.
 The sample project defines both a Gradle and Jenkins build to show both integrations</div>
 
 ## Project Structure
-
-```sh
+```cmd
 └───src
     ├───main
     │   ├───java
@@ -27,27 +26,107 @@ The sample project defines both a Gradle and Jenkins build to show both integrat
     └───test
         ├───java
         │   ├───pageObjects
-        │   │   ├───initializePageObjects
         │   │   └───pages
         │   ├───steps
+        │   │   ├───initializeSteps
+        │   │   └───scenarioSteps
         │   └───tests
         └───resources
             └───CSV Files
+|   LICENSE
+|   pom.xml
+|   README.md
+|   serenity.properties
 ```
 
 ## Maven
-
-```sh
-mvn clean verify -Dwebdriver.driver=chrome -Dwebdriver.chrome.driver=/opt/dev/chromedriver
+```cmd
+mvn clean verify -Dwebdriver.driver=chrome -Dwebdriver.chrome.driver=./src/main/resources/drivers/chromedriver.exe
 ```
 
 To use default webdriver:
-
-```
+```cmd
 mvn verify
 ```
+
+## Browser Setup
+### File -> serenity.properties
+```
+webdriver.driver = Chrome
+webdriver.chrome.driver = ./src/main/resources/drivers/chromedriver.exe
+webdriver.gecko.driver = ./src/main/resources/drivers/geckodriver.exe
+webdriver.edge.driver = ./src/main/resources/drivers/MicrosoftWebDriver.exe
+webdriver.ie.driver = ./src/main/resources/drivers/IEDriverServer.exe
+```
+
+## Examples
+
+### Step 1: Define Page Objects
+
+```java
+public class GoogleHomePage extends PageObject
+{	
+	public GoogleHomePage(WebDriver driver) 
+    {
+        super(driver);
+    }
+
+    //Page Objects
+
+    //Page Methods
+}
+```
+
+### Step 2: Define Scenario Steps
+
+```java
+public class GoogleHomePageSteps extends ScenarioSteps
+{
+	private static final long serialVersionUID = 1L;
+	
+	public GoogleHomePageSteps(Pages pages) 
+	{
+		super(pages);
+	}
+	
+	public GoogleHomePage googleHomePage() 
+	{
+		return getPages().currentPageAt(GoogleHomePage.class);
+	}
+
+    //Define Scenario Steps
+}
+```
+### Step 3: Initialize Scenario Steps
+
+```java
+public class ScenarioStepsInitializer extends MainMethod
+{	
+	@Steps
+	public GoogleHomePageSteps googleHomePageSteps;
+	
+}
+```
+### Step 4: Write Tests
+
+```java
+public class GoogleSearchPassTest extends ScenarioStepsInitializer
+{
+    @Test
+    public void googleSearchPassTest() 
+    {   	
+		googleHomePageSteps
+		.verifyPageTitle()
+		.verifyPageElements()
+		.searchFor("Naruto Uzumaki");
+		googleSearchResultsSteps
+		.verifyPageElements()
+		.verifyPageTitle("Naruto Uzumaki");
+    }
+}
+```
+
 
 See example in Jenkins [here](https://martinreinhardt-online.de/jenkins/view/Demos/job/Serenity/job/serenity_maven_sample).
 
 A sample report can be viewed [here](https://martinreinhardt-online.de/jenkins/view/Demos/job/Serenity/job/serenity_maven_sample/Serenity_Report/).
-

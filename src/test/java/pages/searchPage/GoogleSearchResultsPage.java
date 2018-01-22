@@ -4,7 +4,7 @@
  * @Time 8:00:00 PM
  */
 
-package pageObjects.pages;
+package pages.searchPage;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;

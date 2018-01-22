@@ -1,4 +1,4 @@
-package pageObjects.pages;
+package pages.loginPage;
 
 import static org.junit.Assert.assertTrue;
 

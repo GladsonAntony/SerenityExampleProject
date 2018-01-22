@@ -1,12 +1,15 @@
 package tests;
 
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
+import net.serenitybdd.junit.runners.SerenityParameterizedRunner;
 import net.thucydides.junit.annotations.UseTestDataFrom;
-import pageObjects.initializePageObjects.PageFactoryInitializer;
+import steps.initializeSteps.ScenarioStepsInitializer;
 
+@RunWith(SerenityParameterizedRunner.class)
 @UseTestDataFrom(value="./src/test/resources/CSV Files/performLogin.csv")
-public class GoogleLoginTest extends PageFactoryInitializer
+public class GoogleLoginTest extends ScenarioStepsInitializer
 {	
 	private String EmailAddress;                      
 	private String Password;
@@ -21,7 +24,7 @@ public class GoogleLoginTest extends PageFactoryInitializer
 	}
     
 	@Test	
-	public void performLogin(/*String email,String password*/)
+	public void performLogin()
 	{
 		googleHomePageSteps 
 		.verifyPageElements()

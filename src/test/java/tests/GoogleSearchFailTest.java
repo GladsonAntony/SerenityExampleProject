@@ -8,12 +8,12 @@ package tests;
 
 import org.junit.Test;
 
-import pageObjects.initializePageObjects.PageFactoryInitializer;
+import steps.initializeSteps.ScenarioStepsInitializer;
 
-public class GoogleSearchFailTest extends PageFactoryInitializer
+public class GoogleSearchFailTest extends ScenarioStepsInitializer
 {
     @Test
-    public void googleSearchFailTest() 
+    public void googleSearchFailTest1() 
     {
 		googleHomePageSteps
 		.verifyPageTitle()

@@ -8,9 +8,10 @@ package tests;
 
 import org.junit.Test;
 
-import pageObjects.initializePageObjects.PageFactoryInitializer;
+import steps.initializeSteps.ScenarioStepsInitializer;
 
-public class GoogleSearchPassTest extends PageFactoryInitializer
+
+public class GoogleSearchPassTest extends ScenarioStepsInitializer
 {
     @Test
     public void googleSearchPassTest() 

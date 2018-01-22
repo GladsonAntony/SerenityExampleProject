@@ -3,7 +3,7 @@
  * @Date 01-Jan-2018 
  * @Time 9:13:42 AM
  */
-package pageObjects.pages;
+package pages.homePage;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsString;

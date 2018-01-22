@@ -3,12 +3,12 @@
  * @Date 14-Jan-2018 
  * @Time 9:53:27 PM
  */
-package steps;
+package steps.scenarioSteps;
 
 import net.thucydides.core.pages.Pages;
 import net.thucydides.core.steps.ScenarioSteps;
-import pageObjects.pages.GoogleHomePage;
-import pageObjects.pages.GoogleLoginPage;
+import pages.homePage.GoogleHomePage;
+import pages.loginPage.GoogleLoginPage;
 
 /**
  * @Author Gladson Antony
