@@ -188,12 +188,10 @@
 				<version>2.20.1</version>
 				<configuration>
 					<includes>
-						<include>**/*Test.java</include>
-						<include>**/Test*.java</include>
-						<include>**/When*.java</include>
+						<include>testSuites.TestSuiteToExecute.java</include>
 					</includes>
 					<argLine>-Xmx512m</argLine>
-					<parallel>classes</parallel>
+					<parallel>methods</parallel>
 					<perCoreThreadCount>true</perCoreThreadCount>
 					<threadCount>${parallel-tests}</threadCount>
 				</configuration>

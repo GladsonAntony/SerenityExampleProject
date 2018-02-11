@@ -8,6 +8,7 @@ package tests;
 
 import org.junit.Test;
 
+import net.thucydides.core.annotations.WithTag;
 import steps.initializeSteps.ScenarioStepsInitializer;
 
 
