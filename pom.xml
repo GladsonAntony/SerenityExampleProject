@@ -10,7 +10,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<parallel-tests>1</parallel-tests>
+		<parallel.tests>2</parallel.tests>
 		<compiler.version>1.8</compiler.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
 		<maven.compiler.target>1.8</maven.compiler.target>
@@ -162,7 +162,6 @@
 
 	<build>
 		<plugins>
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-eclipse-plugin</artifactId>
@@ -188,12 +187,13 @@
 				<version>2.20.1</version>
 				<configuration>
 					<includes>
-						<include>testSuites.TestSuiteToExecute.java</include>
+						<include>testSuites/TestSuiteToExecute.java</include>
 					</includes>
 					<argLine>-Xmx512m</argLine>
-					<parallel>methods</parallel>
+					<parallel>classes</parallel>
 					<perCoreThreadCount>true</perCoreThreadCount>
-					<threadCount>${parallel-tests}</threadCount>
+					<threadCount>${parallel.tests}</threadCount>
+					<forkCount>${parallel.tests}</forkCount>
 				</configuration>
 				<executions>
 					<execution>
@@ -273,8 +273,7 @@
 				<version>3.0.2</version>
 			</plugin>
 
-			<!-- This Plugin creates a jar archive of the source files of the current 
-				project -->
+			<!-- This Plugin creates a jar archive of the source files of the current project -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-source-plugin</artifactId>

@@ -25,10 +25,10 @@ public class GoogleLoginPage extends PageObject
     @FindBy(xpath="//div[text()='More options']")
     private WebElement button_MoreOptions;
 
-    @FindBy(xpath="//span[text()='Next']")
+    @FindBy(xpath="//*[@id=\"identifierNext\"]/content/span")
     private WebElement button_Next;
         
-    @FindBy(xpath="//input[@type='password']")
+    @FindBy(xpath="//*[@id=\"password\"]/div[1]/div/div[1]/input")
     private WebElement field_Password;
 
     @FindBy(xpath="//div[text()='Forgot password?']")
@@ -37,7 +37,7 @@ public class GoogleLoginPage extends PageObject
 	public GoogleLoginPage verifyPageElements() 
 	{
 		assertTrue(field_EMailID.isDisplayed());
-		assertTrue(button_ForgotEMail.isDisplayed());
+//		assertTrue(button_ForgotEMail.isDisplayed());
 		assertTrue(button_Next.isDisplayed());
 		return this;
 	}
@@ -54,7 +54,7 @@ public class GoogleLoginPage extends PageObject
 		waitFor(field_Password);
 		assertTrue(field_Password.isDisplayed());
 		field_Password.sendKeys(password);
-		button_Next.click();
+//		button_Next.click();
 		return this;
 	}
 }

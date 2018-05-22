@@ -8,11 +8,13 @@ package testSuites;
 import org.junit.runner.RunWith;
 import org.junit.runners.Suite;
 
+import tests.GoogleLoginTest;
+import tests.GoogleSearchFailTest;
 import tests.GoogleSearchPassTest;
 
 @RunWith(Suite.class)
 @Suite.SuiteClasses
-({ GoogleSearchPassTest.class})
+({ GoogleSearchPassTest.class, GoogleSearchFailTest.class, GoogleLoginTest.class})
 
 public class TestSuiteToExecute 
 { }
