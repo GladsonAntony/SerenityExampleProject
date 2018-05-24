@@ -187,11 +187,13 @@
 				<version>2.20.1</version>
 				<configuration>
 					<includes>
-						<include>testSuites/TestSuiteToExecute.java</include>
+						<include>./**/tests/**.java</include>
 					</includes>
-					<argLine>-Xmx512m</argLine>
-					<parallel>classes</parallel>
-					<perCoreThreadCount>true</perCoreThreadCount>
+					<reuseForks>false</reuseForks>
+                    <argLine>-XX:MaxPermSize=2G</argLine>
+                    <failIfNoTests>false</failIfNoTests>
+					<parallel>methods</parallel>
+					<perCoreThreadCount>false</perCoreThreadCount>
 					<threadCount>${parallel.tests}</threadCount>
 					<forkCount>${parallel.tests}</forkCount>
 				</configuration>
